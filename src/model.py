@@ -1,8 +1,10 @@
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense
+from tensorflow import keras
+
+# from tensorflow.keras import models
+# from tensorflow.keras.layers import LSTM, Dense
 
 def train_linear_regression(X_train, y_train):
     model = LinearRegression()
@@ -16,11 +18,11 @@ def evaluate_model(model, X_test, y_test):
     return mae, mse
 
 def build_lstm_model(sequence_length):
-    model = Sequential()
-    model.add(LSTM(50, return_sequences=True, input_shape=(sequence_length, 1)))
-    model.add(LSTM(50, return_sequences=False))
-    model.add(Dense(25))
-    model.add(Dense(1))
+    model = keras.models.Sequential()
+    model.add(keras.layers.LSTM(50, return_sequences=True, input_shape=(sequence_length, 1)))
+    model.add(keras.layers.LSTM(50, return_sequences=False))
+    model.add(keras.layers.Dense(25))
+    model.add(keras.layers.Dense(1))
     model.compile(optimizer='adam', loss='mean_squared_error')
     return model
 
