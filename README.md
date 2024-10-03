@@ -2,7 +2,7 @@
 
 This project predicts stock prices using two different models: **Linear Regression** and **LSTM (Long Short-Term Memory)**. It leverages historical stock data for a company (e.g., Apple, AAPL) and evaluates model performance on unseen data.
 
-![Stock Price Data Visualization](path_to_image_1)
+![Stock Price Data Visualization](https://github.com/Payal-Sinha09/Stock-Price-Prediction/blob/master/images/Figure_1.png)
 
 ## Table of Contents
 - [Introduction](#introduction)
